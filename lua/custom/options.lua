@@ -21,5 +21,8 @@ vim.o.sidescrolloff = 5
 vim.o.splitbelow = true -- Put new windows below current
 vim.o.splitright = true -- Put new windows right of current
 
+-- Cursorline
+vim.o.cursorline = true
+
 -- Return of table required by Lazy
 return {}
