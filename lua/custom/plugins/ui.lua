@@ -30,11 +30,15 @@ return {
   -- Indents
   {
     'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      --char = '┊',
-      char = "▏",
-      show_trailing_blankline_indent = false,
-    },
+    config = function()
+      require('ibl').setup{
+        --char = '┊',
+        indent = {
+          char = "▏",
+        },
+        -- show_trailing_blankline_indent = false,
+      }
+    end,
   },
 
 }
