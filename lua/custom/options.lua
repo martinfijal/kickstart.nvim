@@ -24,5 +24,16 @@ vim.o.splitright = true -- Put new windows right of current
 -- Cursorline
 vim.o.cursorline = true
 
+-- Statusline
+-- 2 == always show status line
+-- 3 == single global status line
+vim.o.laststatus = 2
+
+
+-- Command
+-- 0 == combined command and status
+vim.o.cmdheight = 1
+
+
 -- Return of table required by Lazy
 return {}
