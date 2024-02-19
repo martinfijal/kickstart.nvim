@@ -19,6 +19,11 @@ return {
       { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit" },
     },
     opts = {
+      sections = {
+        untracked = {
+          folded = true
+        },
+      },
       integrations = {
         diffview = true
       }
@@ -29,10 +34,15 @@ return {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     keys = {
-      {'<leader>gtb', require('gitsigns').toggle_current_line_blame, desc = 'Toggle Git Blame'},
+      {'<leader>gb', require('gitsigns').toggle_current_line_blame, desc = 'Toggle Git Blame'},
     },
     opts = {
       -- See `:help gitsigns.txt`
+      current_line_blame = false,
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = 'overlay',
+      },
       signs = {
         add = { text = '+' },
         change = { text = '~' },
