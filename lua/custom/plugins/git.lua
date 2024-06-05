@@ -9,6 +9,7 @@ return {
   -- UI for git
   {
     "NeogitOrg/neogit",
+    tag = "v0.0.1",  -- TODO : for 0.9.x compat, remove after upgrade to 0.10
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
       "nvim-telescope/telescope.nvim", -- optional
@@ -18,7 +19,13 @@ return {
     keys = {
       { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit" },
     },
+    cmd = "Neogit",
     opts = {
+      -- Changes what mode the Commit Editor starts in. `true` will leave nvim in normal mode, `false` will change nvim to
+      -- insert mode, and `"auto"` will change nvim to insert mode IF the commit message is empty, otherwise leaving it in
+      -- normal mode.
+      disable_insert_on_commit = true,
+
       sections = {
         untracked = {
           folded = true
