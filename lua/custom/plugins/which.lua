@@ -4,7 +4,7 @@ local wk = require("which-key")
 wk.register({
   c = {
     name = 'comment',
-    c = {'<cmd>gc<CR>', 'Toggle linewise [gc]'},
+    -- c = {'<cmd>gc<CR>', 'Toggle linewise [gc]'},
   },
   b = {
     name = 'buffer',
